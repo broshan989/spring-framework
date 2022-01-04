@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	
+	
+	 <bean id="address" class="com.app.constructor.Address" >
+		<constructor-arg name="street" value="Laxmi road"/>
+		<constructor-arg name="city" value="Pune"/>
+	</bean>
+	<bean id="student" class="com.app.constructor.Student" autowire="byType">
+		<constructor-arg value="Virat" />
+		<constructor-arg  value="75"/>
+	</bean> 
+	
+</beans>
+
+<!-- here to initialize student bean it will call two args ctor
++ Autowire is byType so Address type of bean will be injected to inject address bean it will call setAddress of Student
++ if multiple beans are present of Address then we have to use @Qualifier annotation it will take id of address bean as argument
+  that bean will be injected accordingly 
+
+-->

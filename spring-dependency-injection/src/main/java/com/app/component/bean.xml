@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="com.app.component"/>
+	
+	 <!-- <bean id="address" class="com.app.component.Address">
+		<property name="street" value="JM Road"/>
+		<property name="city" value="Mumbai"/>
+	</bean>  -->
+	
+	<!--<bean id="student" class="com.app.annotation.Student"> No autowire require by default autowire is No
+		<constructor-arg name="name" value="Sachin"/>
+		<constructor-arg name="marks" value="88"/>
+	</bean> -->
+	
+</beans>
